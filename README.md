@@ -60,7 +60,6 @@
 | kotoba_wallet_id | references | foreign_key:true |
 | plus_kotoba      | integer    |                  |
 | minus_kotoba     | integer    |                  |
-| sum_kotoba       | integer    |                  |
 
 ### Association
 
