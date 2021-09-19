@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class KotobaWalletControllerTest < ActionDispatch::IntegrationTest
+class WalletsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
