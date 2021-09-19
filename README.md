@@ -18,9 +18,9 @@
 ### Association
 
 - has_one:profile
-- has_many:message
-- has_many:buy
-- has_one:kotoba_wallet
+- has_many:messages
+- has_many:buys
+- has_one:wallet
 
 ## Profiles テーブル
 
@@ -37,20 +37,20 @@
 
 - belongs_to:user
 
-## Kotoba_wallets テーブル
+## Wallets テーブル
 
 | Column         | Type       | Options          |
 | -------------- | ---------- | ---------------- |
 | id             |            |                  |
 | user           | references | foreign_key:true |
-| Stock_quantity | integer    | null: false      |
+| stock_quantity | integer    | null: false      |
 
 ### Association
 
 - belongs_to:user
 - has_one:transaction
-- has_many:buy
-- has_many:purchase
+- has_many:buys
+- has_many:purchases
 
 ## Transactions テーブル
 
@@ -63,18 +63,18 @@
 
 ### Association
 
-- belongs_to:kotoba_wallet
-- has_many:purchase
-- has_many:buy
+- belongs_to:wallet
+- has_many:purchases
+- has_many:buys
 
 ## Purchases テーブル
 
-| Column           | Type       | Options          |
-| ---------------- | ---------- | ---------------- |
-| id               |            |                  |
-| transaction_id   | references | foreign_key:true |
-| kotoba_wallet_id | references | foreign_key:true |
-| quantity         | integer    |                  |
+| Column         | Type       | Options          |
+| -------------- | ---------- | ---------------- |
+| id             |            |                  |
+| transaction_id | references | foreign_key:true |
+| wallet_id      | references | foreign_key:true |
+| quantity       | integer    |                  |
 
 ### Association
 
@@ -83,22 +83,22 @@
 
 ## Buys テーブル
 
-| Column           | Type       | Options          |
-| ---------------- | ---------- | ---------------- |
-| id               |            |                  |
-| kotoba_wallet_id | references | foreign_key:true |
-| transaction_id   | references | foreign_key:true |
-| giver_id         | references |                  |
-| taker_id         | references |                  |
-| quantity         | integer    |                  |
-| unit_price       | integer    |                  |
-| total_price      | integer    |                  |
+| Column         | Type       | Options          |
+| -------------- | ---------- | ---------------- |
+| id             |            |                  |
+| wallet_id      | references | foreign_key:true |
+| transaction_id | references | foreign_key:true |
+| giver_id       | references |                  |
+| taker_id       | references |                  |
+| quantity       | integer    |                  |
+| unit_price     | integer    |                  |
+| total_price    | integer    |                  |
 
 ### Association
 
 - has_one:message
 - belongs_to:user
-- belongs_to:kotoba_wallet
+- belongs_to:wallet
 - belongs_to:transaction
 
 ## Messages テーブル

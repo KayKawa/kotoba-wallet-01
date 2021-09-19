@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="マスター" id="tByCMGpmWKva-ehy7IAx">
-        <mxGraphModel dx="1788" dy="1234" grid="1" gridSize="40" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="894" dy="617" grid="1" gridSize="40" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="fzMxBz18ubdyDKKRVxYx-0"/>
                 <mxCell id="fzMxBz18ubdyDKKRVxYx-1" parent="fzMxBz18ubdyDKKRVxYx-0"/>
@@ -94,7 +94,7 @@
                 <mxCell id="fzMxBz18ubdyDKKRVxYx-42" value="性別" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=1;bottom=0;right=1;editable=1;overflow=hidden;strokeColor=#457B9D;fontColor=#1D3557;" parent="fzMxBz18ubdyDKKRVxYx-41" vertex="1">
                     <mxGeometry x="160" width="160" height="41" as="geometry"/>
                 </mxCell>
-                <mxCell id="fzMxBz18ubdyDKKRVxYx-43" value="string" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=1;bottom=0;right=1;editable=1;overflow=hidden;strokeColor=#457B9D;fontColor=#1D3557;" parent="fzMxBz18ubdyDKKRVxYx-41" vertex="1">
+                <mxCell id="fzMxBz18ubdyDKKRVxYx-43" value="integer" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=1;bottom=0;right=1;editable=1;overflow=hidden;strokeColor=#457B9D;fontColor=#1D3557;" parent="fzMxBz18ubdyDKKRVxYx-41" vertex="1">
                     <mxGeometry x="320" width="78.97000000000003" height="41" as="geometry"/>
                 </mxCell>
                 <mxCell id="fzMxBz18ubdyDKKRVxYx-44" value="null:false" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=1;bottom=0;right=1;align=center;spacingLeft=6;overflow=hidden;strokeColor=#457B9D;fontColor=#1D3557;verticalAlign=middle;" parent="fzMxBz18ubdyDKKRVxYx-41" vertex="1">
@@ -184,7 +184,7 @@
                 <mxCell id="fzMxBz18ubdyDKKRVxYx-723" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=15;fontColor=#000000;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;startSize=10;endSize=10;strokeWidth=2;fillColor=#0050ef;strokeColor=#001DBC;" parent="fzMxBz18ubdyDKKRVxYx-1" source="fzMxBz18ubdyDKKRVxYx-556" target="fzMxBz18ubdyDKKRVxYx-625" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="fzMxBz18ubdyDKKRVxYx-556" value="Kotoba_wallets【ユーザーは1つしか持てない】&#10;持ち主、在庫数" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;rounded=0;sketch=0;fontColor=#ffffff;fillColor=#1ba1e2;strokeColor=#006EAF;perimeterSpacing=1;fontSize=15;" parent="fzMxBz18ubdyDKKRVxYx-1" vertex="1">
+                <mxCell id="fzMxBz18ubdyDKKRVxYx-556" value="Wallets【ユーザーは1つしか持てない】&#10;持ち主、在庫数" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;rounded=0;sketch=0;fontColor=#ffffff;fillColor=#1ba1e2;strokeColor=#006EAF;perimeterSpacing=1;fontSize=15;" parent="fzMxBz18ubdyDKKRVxYx-1" vertex="1">
                     <mxGeometry x="720.0000000000001" y="960" width="559.9999999999998" height="200.00000000000023" as="geometry"/>
                 </mxCell>
                 <mxCell id="fzMxBz18ubdyDKKRVxYx-557" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=#A8DADC;top=0;left=0;bottom=1;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1D3557;perimeterSpacing=1;strokeColor=#000000;" parent="fzMxBz18ubdyDKKRVxYx-556" vertex="1">
@@ -238,7 +238,7 @@
                 <mxCell id="fzMxBz18ubdyDKKRVxYx-669" value="KOTOBA残高&#10;※通帳の発行・消費の和" style="shape=partialRectangle;connectable=0;fillColor=none;top=1;left=1;bottom=1;right=1;editable=1;overflow=hidden;fontColor=#1D3557;perimeterSpacing=1;strokeColor=#000000;fontSize=9;" parent="fzMxBz18ubdyDKKRVxYx-668" vertex="1">
                     <mxGeometry width="160" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="fzMxBz18ubdyDKKRVxYx-670" value="Stock_quantity" style="shape=partialRectangle;connectable=0;fillColor=none;top=1;left=1;bottom=1;right=1;editable=1;overflow=hidden;fontColor=#1D3557;perimeterSpacing=1;strokeColor=#000000;" parent="fzMxBz18ubdyDKKRVxYx-668" vertex="1">
+                <mxCell id="fzMxBz18ubdyDKKRVxYx-670" value="stock_quantity" style="shape=partialRectangle;connectable=0;fillColor=none;top=1;left=1;bottom=1;right=1;editable=1;overflow=hidden;fontColor=#1D3557;perimeterSpacing=1;strokeColor=#000000;" parent="fzMxBz18ubdyDKKRVxYx-668" vertex="1">
                     <mxGeometry x="160" width="160" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="fzMxBz18ubdyDKKRVxYx-671" value="integer" style="shape=partialRectangle;connectable=0;fillColor=none;top=1;left=1;bottom=1;right=1;editable=1;overflow=hidden;fontColor=#1D3557;perimeterSpacing=1;strokeColor=#000000;" parent="fzMxBz18ubdyDKKRVxYx-668" vertex="1">
