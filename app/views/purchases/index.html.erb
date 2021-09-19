@@ -1,0 +1,7 @@
+<%= render "shared/second-header"%>
+<h1>こちらにKOTOBA仕入れ内容が入ります。</h1>
+<br>
+<%= form_with model: @, local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+<% end %>
+<%= render "shared/second-footer"%>
