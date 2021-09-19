@@ -11,12 +11,12 @@ class ApplicationController < ActionController::Base
                                              :birthday, { wallet_attributes: [:stock_quantity] }])
     # ログイン時に許可するストロングパラメータ
     devise_parameter_sanitizer.permit(:sign_in,
-                                      keys: %i[nickname gender_id last_name first_name last_kana first_kana
-                                               birthday])
+                                      keys: [:nickname, :gender_id, :last_name, :first_name, :last_kana, :first_kana,
+                                             :birthday, { wallet_attributes: [:stock_quantity] }])
     # ユーザー情報更新時に許可するストロングパラメータ
     devise_parameter_sanitizer.permit(:account_update,
-                                      keys: %i[nickname gender_id last_name first_name last_kana first_kana
-                                               birthday])
+                                      keys: [:nickname, :gender_id, :last_name, :first_name, :last_kana, :first_kana,
+                                             :birthday, { wallet_attributes: [:stock_quantity] }])
   end
 
   def basic_auth
