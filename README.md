@@ -74,11 +74,11 @@
 | id             |            |                  |
 | transaction_id | references | foreign_key:true |
 | wallet_id      | references | foreign_key:true |
-| quantity       | integer    |                  |
+| quantity       | integer    | null:false       |
 
 ### Association
 
-- belongs_to:kotoba_wallet
+- belongs_to:wallet
 - belongs_to:transaction
 
 ## Buys テーブル
