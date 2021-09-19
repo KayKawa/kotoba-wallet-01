@@ -54,12 +54,12 @@
 
 ## Transactions テーブル
 
-| Column           | Type       | Options          |
-| ---------------- | ---------- | ---------------- |
-| id               |            |                  |
-| kotoba_wallet_id | references | foreign_key:true |
-| plus_kotoba      | integer    |                  |
-| minus_kotoba     | integer    |                  |
+| Column    | Type       | Options          |
+| --------- | ---------- | ---------------- |
+| id        |            |                  |
+| wallet_id | references | foreign_key:true |
+| plus      | integer    |                  |
+| minus     | integer    |                  |
 
 ### Association
 
