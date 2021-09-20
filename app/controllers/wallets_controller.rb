@@ -1,3 +1,5 @@
 class WalletsController < ApplicationController
-  def index; end
+  def index
+    @wallets = Wallet.all
+  end
 end

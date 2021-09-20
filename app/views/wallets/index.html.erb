@@ -1,12 +1,20 @@
 <%= render "shared/header" %>
-<h1>トップページです</h1>
+<h1>WALLETページです</h1>
 <BR>
-<h1>トップページです</h1>
+<h1>WALLETページです</h1>
 <BR>
-<h1>トップページです</h1>
+<h1>WALLETページです</h1>
 <BR>
-<h1>トップページです</h1>
+<% @wallets.each do |wallet| %>
+  <%= link_to wallets_path(wallet.id) do %>
+    <%= wallet.user_id %>
+  <% end %>
+<% end %>
 <BR>
-<h1>トップページです</h1>
+<h1>WALLETページです</h1>
+<BR>
+<h1>WALLETページです</h1>
+<BR>
+<h1>WALLETページです</h1>
 <BR>
 <%= render "shared/footer" %>

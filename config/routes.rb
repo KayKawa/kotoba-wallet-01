@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  root to: 'kotoba_wallet#home'
+
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
-  root to: 'wallets#index'
+  resources :wallets, only: :index
 end

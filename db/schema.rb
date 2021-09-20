@@ -10,25 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_19_213730) do
+ActiveRecord::Schema.define(version: 2021_09_20_114909) do
 
   create_table "purchases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "wallet_id"
-    t.bigint "transaction_id"
+    t.bigint "statement_id"
     t.integer "quantity", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["transaction_id"], name: "index_purchases_on_transaction_id"
-    t.index ["wallet_id"], name: "index_purchases_on_wallet_id"
+    t.index ["statement_id"], name: "index_purchases_on_statement_id"
   end
 
-  create_table "transactions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "statements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "wallet_id"
     t.integer "plus"
     t.integer "minus"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["wallet_id"], name: "index_transactions_on_wallet_id"
+    t.index ["wallet_id"], name: "index_statements_on_wallet_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -58,8 +57,7 @@ ActiveRecord::Schema.define(version: 2021_09_19_213730) do
     t.index ["user_id"], name: "index_wallets_on_user_id"
   end
 
-  add_foreign_key "purchases", "transactions"
-  add_foreign_key "purchases", "wallets"
-  add_foreign_key "transactions", "wallets"
+  add_foreign_key "purchases", "statements"
+  add_foreign_key "statements", "wallets"
   add_foreign_key "wallets", "users"
 end

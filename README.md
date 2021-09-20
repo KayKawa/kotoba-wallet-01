@@ -52,7 +52,7 @@
 - has_many:buys
 - has_many:purchases
 
-## Transactions テーブル
+## Statement テーブル
 
 | Column    | Type       | Options          |
 | --------- | ---------- | ---------------- |

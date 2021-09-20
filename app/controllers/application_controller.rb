@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def after_sign_in_path_for(_resource)
+    wallets_path
+  end
+
   def configure_permitted_parameters
     # 新規登録時に許可するストロングパラメータ
     devise_parameter_sanitizer.permit(:sign_up,
