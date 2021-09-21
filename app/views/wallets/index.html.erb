@@ -6,10 +6,11 @@
 <h1>WALLETページです</h1>
 <BR>
 <% @wallets.each do |wallet| %>
-  <%= link_to wallets_path(wallet.id) do %>
-    <%= wallet.user_id %>
+  <%= link_to wallet_path(wallet.id) do %>
+    <span>〇〇さんのWALLET</span><BR>
   <% end %>
 <% end %>
+<BR>
 <BR>
 <h1>WALLETページです</h1>
 <BR>

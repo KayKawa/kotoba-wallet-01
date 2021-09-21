@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
-  resources :wallets, only: :index
+  resources :wallets, only: %i[index show]
 end
