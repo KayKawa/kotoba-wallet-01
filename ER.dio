@@ -346,7 +346,7 @@
                         <mxPoint x="-1.1368683772161603e-13" y="341" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="fzMxBz18ubdyDKKRVxYx-651" value="Transactions【発行・消費の履歴】&#10;どの口座、いつ、いくつ（消費or発行）、SUM値" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;rounded=0;sketch=0;fontColor=#ffffff;fillColor=#1ba1e2;strokeColor=#006EAF;perimeterSpacing=1;fontSize=15;" parent="fzMxBz18ubdyDKKRVxYx-1" vertex="1">
+                <mxCell id="fzMxBz18ubdyDKKRVxYx-651" value="Statements【発行・消費の履歴】&#10;どの口座、いつ、いくつ（消費or発行）" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;rounded=0;sketch=0;fontColor=#ffffff;fillColor=#1ba1e2;strokeColor=#006EAF;perimeterSpacing=1;fontSize=15;" parent="fzMxBz18ubdyDKKRVxYx-1" vertex="1">
                     <mxGeometry x="720.0000000000001" y="1280" width="559.9999999999998" height="280" as="geometry"/>
                 </mxCell>
                 <mxCell id="fzMxBz18ubdyDKKRVxYx-652" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=#A8DADC;top=0;left=0;bottom=1;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1D3557;perimeterSpacing=1;strokeColor=#000000;" parent="fzMxBz18ubdyDKKRVxYx-651" vertex="1">

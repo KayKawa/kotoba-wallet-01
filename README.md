@@ -48,7 +48,7 @@
 ### Association
 
 - belongs_to:user
-- has_one:transaction
+- has_one:statement
 - has_many:buys
 - has_many:purchases
 
@@ -69,37 +69,37 @@
 
 ## Purchases テーブル
 
-| Column         | Type       | Options          |
-| -------------- | ---------- | ---------------- |
-| id             |            |                  |
-| transaction_id | references | foreign_key:true |
-| wallet_id      | references | foreign_key:true |
-| quantity       | integer    | null:false       |
+| Column       | Type       | Options          |
+| ------------ | ---------- | ---------------- |
+| id           |            |                  |
+| statement_id | references | foreign_key:true |
+| wallet_id    | references | foreign_key:true |
+| quantity     | integer    | null:false       |
 
 ### Association
 
 - belongs_to:wallet
-- belongs_to:transaction
+- belongs_to:statement
 
 ## Buys テーブル
 
-| Column         | Type       | Options          |
-| -------------- | ---------- | ---------------- |
-| id             |            |                  |
-| wallet_id      | references | foreign_key:true |
-| transaction_id | references | foreign_key:true |
-| giver_id       | references |                  |
-| taker_id       | references |                  |
-| quantity       | integer    |                  |
-| unit_price     | integer    |                  |
-| total_price    | integer    |                  |
+| Column       | Type       | Options          |
+| ------------ | ---------- | ---------------- |
+| id           |            |                  |
+| wallet_id    | references | foreign_key:true |
+| statement_id | references | foreign_key:true |
+| giver_id     | references |                  |
+| taker_id     | references |                  |
+| quantity     | integer    |                  |
+| unit_price   | integer    |                  |
+| total_price  | integer    |                  |
 
 ### Association
 
 - has_one:message
 - belongs_to:user
 - belongs_to:wallet
-- belongs_to:transaction
+- belongs_to:statement
 
 ## Messages テーブル
 
