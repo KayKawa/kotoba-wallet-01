@@ -6,8 +6,8 @@ class PurchasesController < ApplicationController
 
   def create
     @wallet = Wallet.find(params[:wallet_id])
-    @purchase = Purchase.new(purchases_params)
-    if @purchase.save
+    @purchase_statement = PurchaseStatement.new(purchases_params)
+    if @purchase_statement.save
       redirect_to wallets_path
     else
       render :new
