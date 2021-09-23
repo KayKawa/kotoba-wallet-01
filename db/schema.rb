@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_09_20_114909) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["statement_id"], name: "index_purchases_on_statement_id"
+    t.index ["wallet_id"], name: "index_purchases_on_wallet_id"
   end
 
   create_table "statements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -58,6 +59,7 @@ ActiveRecord::Schema.define(version: 2021_09_20_114909) do
   end
 
   add_foreign_key "purchases", "statements"
+  add_foreign_key "purchases", "wallets"
   add_foreign_key "statements", "wallets"
   add_foreign_key "wallets", "users"
 end
