@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   }
   resources :wallets, only: %i[index show] do
     resources :purchases, only: %i[new create]
+    resources :buys, only: %i[new create]
   end
 end

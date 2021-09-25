@@ -13,18 +13,15 @@
 ActiveRecord::Schema.define(version: 2021_09_24_000000) do
 
   create_table "buys", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "giver_id"
-    t.bigint "taker_id"
+    t.integer "giver_id"
+    t.integer "taker_id"
     t.bigint "wallet_id"
     t.bigint "statement_id"
     t.integer "quantity", null: false
     t.integer "unit_price", null: false
-    t.integer "total_price", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["giver_id"], name: "index_buys_on_giver_id"
     t.index ["statement_id"], name: "index_buys_on_statement_id"
-    t.index ["taker_id"], name: "index_buys_on_taker_id"
     t.index ["wallet_id"], name: "index_buys_on_wallet_id"
   end
 
@@ -75,8 +72,6 @@ ActiveRecord::Schema.define(version: 2021_09_24_000000) do
   end
 
   add_foreign_key "buys", "statements"
-  add_foreign_key "buys", "users", column: "giver_id"
-  add_foreign_key "buys", "users", column: "taker_id"
   add_foreign_key "buys", "wallets"
   add_foreign_key "purchases", "statements"
   add_foreign_key "purchases", "wallets"
