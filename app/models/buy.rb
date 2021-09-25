@@ -3,4 +3,5 @@ class Buy < ApplicationRecord
   belongs_to :taker, class_name: 'User', foreign_key: 'taker_id'
   belongs_to :wallet
   belongs_to :statement
+  has_one :message
 end
