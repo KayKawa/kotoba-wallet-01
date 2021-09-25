@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_24_000000) do
+ActiveRecord::Schema.define(version: 2021_09_25_010455) do
 
   create_table "buys", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "giver_id"
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(version: 2021_09_24_000000) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["statement_id"], name: "index_buys_on_statement_id"
     t.index ["wallet_id"], name: "index_buys_on_wallet_id"
+  end
+
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "buy_id"
+    t.bigint "giver_id"
+    t.bigint "taker_id"
+    t.text "message", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["buy_id"], name: "index_messages_on_buy_id"
+    t.index ["giver_id"], name: "index_messages_on_giver_id"
+    t.index ["taker_id"], name: "index_messages_on_taker_id"
   end
 
   create_table "purchases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -73,6 +85,9 @@ ActiveRecord::Schema.define(version: 2021_09_24_000000) do
 
   add_foreign_key "buys", "statements"
   add_foreign_key "buys", "wallets"
+  add_foreign_key "messages", "buys"
+  add_foreign_key "messages", "users", column: "giver_id"
+  add_foreign_key "messages", "users", column: "taker_id"
   add_foreign_key "purchases", "statements"
   add_foreign_key "purchases", "wallets"
   add_foreign_key "statements", "wallets"
