@@ -1,11 +1,11 @@
 # Formオブジェクト
 class PurchaseStatement
   include ActiveModel::Model
-  attr_accessor :wallet_id, :statement_id, :quantity, :plus, :minus, :stock_quantity
+  attr_accessor :wallet_id, :statement_id, :quantity, :plus, :stock_quantity
 
   def save
     # 通帳を保存
-    statement = Statement.create(plus: quantity, minus: minus, wallet_id: wallet_id)
+    statement = Statement.create(plus: quantity, wallet_id: wallet_id)
     # 発行情報を保存
     Purchase.create(wallet_id: wallet_id, statement_id: statement.id, quantity: quantity)
     # WALLET残高の更新
