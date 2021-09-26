@@ -5,9 +5,10 @@
     <%= @wallet.user.nickname%>さんのWALLET<br>
     現在の残高は<%= @wallet.stock_quantity %>です。<br>
     購入数、購入単価を入力してください。<br>
-    <%= form_with model: @buy, url:wallet_buys_path, local: true do |f| %>
+    <%= form_with model: @buy_message, url:wallet_buys_path, local: true do |f| %>
       <%= f.text_field :quantity, placeholder:"例）300" %>
       <%= f.text_field :unit_price, placeholder:"例）10" %>
+      <%= f.text_field :message, placeholder:"購入数量文のメッセージを入力" %>
       <%= f.submit "　購入する" %>
     <% end %>
   </p>

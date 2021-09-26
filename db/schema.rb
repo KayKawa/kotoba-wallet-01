@@ -27,14 +27,14 @@ ActiveRecord::Schema.define(version: 2021_09_25_010455) do
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "buy_id"
-    t.bigint "giver_id"
-    t.bigint "taker_id"
+    t.bigint "sender_id"
+    t.bigint "receiver_id"
     t.text "message", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["buy_id"], name: "index_messages_on_buy_id"
-    t.index ["giver_id"], name: "index_messages_on_giver_id"
-    t.index ["taker_id"], name: "index_messages_on_taker_id"
+    t.index ["receiver_id"], name: "index_messages_on_receiver_id"
+    t.index ["sender_id"], name: "index_messages_on_sender_id"
   end
 
   create_table "purchases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -86,8 +86,8 @@ ActiveRecord::Schema.define(version: 2021_09_25_010455) do
   add_foreign_key "buys", "statements"
   add_foreign_key "buys", "wallets"
   add_foreign_key "messages", "buys"
-  add_foreign_key "messages", "users", column: "giver_id"
-  add_foreign_key "messages", "users", column: "taker_id"
+  add_foreign_key "messages", "users", column: "receiver_id"
+  add_foreign_key "messages", "users", column: "sender_id"
   add_foreign_key "purchases", "statements"
   add_foreign_key "purchases", "wallets"
   add_foreign_key "statements", "wallets"
