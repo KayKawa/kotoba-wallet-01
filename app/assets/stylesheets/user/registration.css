@@ -94,18 +94,15 @@
   resize: none;
 }
 
-.input-birth-wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .input-birth-wrap select {
   width: 75px;
   margin-top: 5px;
   height: 45px;
   padding-left: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  --tw-border-opacity: 1;
+  border-color: rgba(245, 158, 11, var(--tw-border-opacity));
+  border-radius: 0.5rem;
+  border-width: 2px;
   background: #fff;
   font-size: 12px;
   cursor: pointer;
@@ -159,55 +156,3 @@
 }
 
 /* ここから新規入力 */
-
-input[type="radio"] {
-  opacity: 0;
-}
-.radio03 {
-  box-sizing: border-box;
-  cursor: pointer;
-  display: inline-block;
-  padding: 5px 30px;
-  position: relative;
-  width: auto;
-}
-.radio03::before {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  content: "";
-  display: block;
-  height: 16px;
-  left: 5px;
-  margin-top: -8px;
-  position: absolute;
-  top: 50%;
-  width: 16px;
-}
-.radio03::after {
-  background: #fedd1e;
-  border-radius: 50%;
-  content: "";
-  display: block;
-  height: 10px;
-  left: 9px;
-  margin-top: -4px;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  transform: scale3d(0.3, 0.3, 1);
-  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  width: 10px;
-}
-input[type="radio"]:checked + .radio03::before {
-  border-color: #666;
-}
-input[type="radio"]:checked + .radio03::after {
-  opacity: 1;
-  transform: scale3d(1, 1, 1);
-}
-.checkbox-group {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
